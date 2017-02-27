@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/subset-Circe-Regular.woff2') format('woff2'), url('../fonts/subset-Circe-Regular.woff') format('woff'), url('../fonts/subset-Circe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/subset-Circe-Bold.woff2') format('woff2'), url('../fonts/subset-Circe-Bold.woff') format('woff'), url('../fonts/subset-Circe-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/subset-Circe-Light.woff2') format('woff2'), url('../fonts/subset-Circe-Light.woff') format('woff'), url('../fonts/subset-Circe-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe Extra';
+  src: url('../fonts/subset-Circe-ExtraBold.woff2') format('woff2'), url('../fonts/subset-Circe-ExtraBold.woff') format('woff'), url('../fonts/subset-Circe-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Circe", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+#wrap {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background: url('../img/layout.png') no-repeat 50% 50%;
+}
+h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Circe Extra", Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-size: 62px;
+  line-height: 64px;
+}
+h2 {
+  font-size: 34px;
+  line-height: 42px;
+}
+a {
+  border: 0 none;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+a img {
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border: 0 none;
+}
+.logo {
+  position: absolute;
+  display: block;
+}
+.logo.logo_device {
+  right: 230px;
+  top: 38px;
+}
+.logo.icon-tvzavr-logo {
+  top: 32px;
+  right: 449px;
+  z-index: 100;
+}
+.logo.icon-tvzavr-logo:before {
+  font-size: 144px;
+}
+.copy {
+  position: absolute;
+  bottom: 20px;
+  left: 32px;
+  width: 708px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #82defa;
+  margin: 0;
+  z-index: 100;
+}
+.inner {
+  position: absolute;
+  top: 122px;
+  right: 77px;
+  bottom: 88px;
+  width: 648px;
+}
+.text {
+  font-size: 28px;
+  line-height: 30px;
+}
+.text.text_blue {
+  color: #82defa;
+}
+.step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+.step.active {
+  display: block;
+}
+.step.step_1 h1 {
+  margin: 0px 0px 20px;
+}
+.step.step_1 .form .text {
+  margin-bottom: 12px;
+}
+.step.step_2 {
+  background: url('../img/layout-step2.png') no-repeat 0 74px;
+}
+.step.step_2 h1 {
+  margin: 0 0 30px;
+}
+.step.step_2 h2 {
+  margin: 0 0 24px;
+}
+.step.step_2 .form {
+  margin-top: 70px;
+}
+.step.step_2 .form .text {
+  margin-bottom: 0;
+}
+.form {
+  text-align: center;
+}
+.form input[type="text"] {
+  position: relative;
+  border: none;
+  height: 76px;
+  width: 420px;
+  padding: 0px 10px;
+  font-size: 34px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.form input[type="text"]:focus {
+  outline: none;
+  border: 3px solid #02b0ed;
+}
+::-webkit-input-placeholder {
+  color: #000000;
+}
+::-moz-placeholder {
+  color: #000000;
+}
+:-moz-placeholder {
+  color: #000000;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+.input_wrap {
+  position: relative;
+  padding-bottom: 38px;
+}
+.promo-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f64b4b;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.btn:focus,
+.btn:active {
+  outline: none;
+}
+.btn.close {
+  position: absolute;
+  bottom: 24px;
+  right: 38px;
+  font-size: 21px;
+  line-height: 22px;
+  color: #747f87;
+  padding: 10px 20px;
+  border: 1px solid #747f87;
+  z-index: 100;
+}
+.btn.close:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.btn.close:focus {
+  color: #02b0ed;
+  -webkit-box-shadow: 0 0 35px rgba(2, 180, 242, 0.95);
+  box-shadow: 0 0 35px rgba(2, 180, 242, 0.95);
+}
+.btn.close:focus:before {
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+.btn.btn_blue {
+  width: 420px;
+  height: 76px;
+  line-height: 76px;
+  font-size: 34px;
+  margin-top: 32px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #02b0ed;
+}
+.btn.btn_blue:before {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+.btn.btn_blue:focus:before {
+  -webkit-box-shadow: 0 0 25px rgba(2, 180, 242, 1);
+  box-shadow: 0 0 25px rgba(2, 180, 242, 1);
+  display: block;
+}
+#tvz_keyboard {
+  position: absolute;
+  top: 42px;
+  left: 98px;
+  height: 558px;
+  width: 352px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#tvz_keyboard .tvz_keyboard-item {
+  position: relative;
+  display: block;
+  float: left;
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 4px 0 0 4px;
+  text-align: center;
+  background-color: #1e252d;
+  font-size: 28px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+#tvz_keyboard .tvz_keyboard-item.row_2 {
+  margin-bottom: 12px;
+}
+#tvz_keyboard .tvz_keyboard-item.del {
+  background-image: url("../img/del.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-indent: -5000px;
+}
+#tvz_keyboard .tvz_keyboard-item.clear {
+  position: relative;
+  text-indent: -5000px;
+  width: 188px;
+}
+#tvz_keyboard .tvz_keyboard-item.clear:after {
+  display: inline-block;
+  content: "Очистить";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-indent: 0;
+}
+#tvz_keyboard .tvz_keyboard-item.clear:focus:after {
+  content: "Очистить";
+}
+#tvz_keyboard .tvz_keyboard-item:focus {
+  color: #02b4f2;
+  text-decoration: none;
+}
+#tvz_keyboard .tvz_keyboard-item:focus:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid #02b4f2;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+@font-face {
+  font-family: "untitled-font-1";
+  src: url("../fonts/untitled-font-1.eot");
+  src: url("../fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"), url("../fonts/untitled-font-1.woff") format("woff"), url("../fonts/untitled-font-1.ttf") format("truetype"), url("../fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tvzavr-logo:before {
+  content: "\61";
+}
